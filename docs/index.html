@@ -54,7 +54,8 @@ hello
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin:': 'http://127.0.0.1:8080'
             },
             body: JSON.stringify({
                 initData: window.Telegram.WebApp.initData,
