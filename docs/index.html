@@ -50,7 +50,18 @@ hello
     send.onclick = function () {
         send.textContent = "Pressed" + i;
         i++
-        window.Telegram.WebApp.sendData("datos enviados");
+        fetch('/submitOrder', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                initData: window.Telegram.WebApp.initData,
+
+            })
+        });
+        // window.Telegram.WebApp.sendData("datos enviados");
 
     }
 
