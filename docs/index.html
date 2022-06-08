@@ -50,7 +50,7 @@ hello
     send.onclick = function () {
         send.textContent = "Pressed" + i;
         i++
-        fetch('/submitOrder', {
+        fetch('127.0.0.1:8080/lang/messages', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
